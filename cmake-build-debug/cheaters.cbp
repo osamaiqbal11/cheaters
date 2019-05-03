@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cheaters"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cheaters">
+				<Option output="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/cheaters.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 cheaters"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cheaters/fast">
+				<Option output="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/cheaters.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/."/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 cheaters/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/.idea/cheaters.iml">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/.idea/encodings.xml">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/.idea/misc.xml">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/.idea/modules.xml">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/.idea/vcs.xml">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/.idea/workspace.xml">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/CMakeLists.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cheaters.cpp">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cheaters.h">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/CMakeCache.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/Makefile">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/cheaters.cbp">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/cheaters.exe">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/cmake_install.cmake">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/abf0704.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/abf70402.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/bef1121.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/bgt221.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/bmu5.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/bwa248.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/catchmeifyoucan.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/ckh80.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/ecu201.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/edo14.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/edo20.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/edo26.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/ehc229.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/erk185.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/esv254.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/hal10.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/hte42.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/jrf1109.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/prz100.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/sra107.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/sra119.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/sra126.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/sra31.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/sra42.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/cmake-build-debug/sm_doc_set/sm_doc_set/tyc12.txt">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/main.cpp">
+			<Option target="cheaters"/>
+		</Unit>
+		<Unit filename="C:/Users/Osama Iqbal/Documents/UT/Current Semester/EE 312/cheaters/cheaters/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
