@@ -30,52 +30,54 @@ int getdir (string dir, vector<string> &files)
 int main() {
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
-
     getdir(dir, files);
-
     for (unsigned int i = 0; i < files.size(); i++) {
         cout << i << files[i] << endl;
     }
 
 
+
+    //This loop reads from every file
+    //-------------------------------------------------------------------------------------------00
     ifstream inFile;
     vector <string> words;
-
-        int i = 0;
-        inFile.open("sm_doc_set\\abf0704.txt");
-
-        if(!inFile) {
+    for(int k = 0; k < files.size(); k++) {
+        string doublebackslash = "\\";
+        string openme = dir + doublebackslash + files[k];
+        inFile.open(openme);
+        if (!inFile) {
             cout << "TRAGIC\n";
             exit(-1);
         }
 
+
+        //This loop reads from a file and pushes every alpha numeric string in doc to words-vector
+        //---------------------------------------------------------------------------------------01
         string word;
-        vector <char> wordholder;
-        while(inFile >> word){
+        vector<char> wordholder;
+        while (inFile >> word) {
             wordholder.clear();
-            for(int i = 0; i< word.size(); i++) {
-                if (isalnum((int)word[i]) != 0) {
+            for (int i = 0; i < word.size(); i++) {
+                if (isalnum((int) word[i]) != 0) {
                     wordholder.push_back(word[i]);
-                    cout<<"whileloop\n";
                 }
-                cout<<"forloop1\n";
             }
-
-            cout<<"wordholder size\n"<<wordholder.size()<<"\n";
             word.resize(wordholder.size());
-            for(int i = 0; i<wordholder.size(); i++){
+            for (int i = 0; i < wordholder.size(); i++) {
                 word[i] = wordholder[i];
-                cout<<"forloop2\n";
             }
-
-
             words.push_back(word);
         }
+        //--------------------------------------------------------------------------------------01
+        // Prints every word in file
         /*
-        for(int i = 0; i < words.size(); i++){
-            cout<<words[i]<<"\n";
+        for (int i = 0; i < words.size(); i++) {
+            cout << words[i] << "\n";
         }
         */
-
+        inFile.close();
+    }
+    //-------------------------------------------------------------------------------------------00
+    
     return 0;
 }
