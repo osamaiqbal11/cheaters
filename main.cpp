@@ -35,6 +35,12 @@ int main() {
         cout << i << files[i] << endl;
     }
 
+    struct hashentry{
+        string filename;
+        int number;
+        hashentry *next;
+    };
+
 
 
     //This loop reads from every file
@@ -71,8 +77,13 @@ int main() {
         //--------------------------------------------------------------------------------------01
         //words-vector contains all words in document
 
-        //create hash table here
+        //Initialize hash table here
         //--------------------------------------------------------------------------------------03
+        int maxhash = 3011499;
+        hashentry *hashtable[maxhash];
+        for(int i = 0; i<maxhash; i++){
+            hashtable[i] = NULL;
+        }
         //--------------------------------------------------------------------------------------03
 
 
@@ -82,6 +93,8 @@ int main() {
         //A chunk is made
         //Hashing code goes here
         //--------------------------------------------------------------------------------------03
+
+
         //--------------------------------------------------------------------------------------03
         //--------------------------------------------------------------------------------------02
 
