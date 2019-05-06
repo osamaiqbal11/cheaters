@@ -27,7 +27,21 @@ int getdir (string dir, vector<string> &files)
     return 0;
 }
 
+int findfilenum(string filename, vector<string> files){
+    int i = 0;
+    while(filename != files[i]){
+        i++;
+    }
+    return (i);
+}
+
 int main() {
+
+    //Prompt Code
+    //-------------------------------------------------------------------------
+    int chunksize = 6;
+    //-------------------------------------------------------------------------
+
     string dir = string("sm_doc_set");
     vector<string> files = vector<string>();
     getdir(dir, files);
@@ -37,10 +51,17 @@ int main() {
 
     struct hashentry{
         string filename;
-        int number;
         hashentry *next;
     };
 
+    //Initialize hash table here
+    //--------------------------------------------------------------------------------------07
+    int maxhash = 63999;
+    hashentry *hashtable[maxhash];
+    for(int m = 0; m<maxhash; m++){
+        hashtable[m] = NULL;
+    }
+    //--------------------------------------------------------------------------------------07
 
 
     //This loop reads from every file
@@ -84,43 +105,102 @@ int main() {
         */
 
 
-        //Initialize hash table here
-        //--------------------------------------------------------------------------------------07
-        int maxhash = 301149;
-        hashentry *hashtable[maxhash];
-        for(int i = 0; i<maxhash; i++){
-            hashtable[i] = NULL;
-        }
-        //--------------------------------------------------------------------------------------07
 
 
         //chunking code goes here
         //--------------------------------------------------------------------------------------02
         string chunk;
-        for(int i = 0; i < words.size(); i++) {
+        for(int i = 0; i < (words.size()-(chunksize-1)); i++) {
 
-            for(int j = i; j < (i+6); j++){
+            for(int j = i; j < (i + chunksize); j++){
                 chunk = chunk + words[j];
             }
 
             //A chunk is made
             //Hashing code goes here
             //--------------------------------------------------------------------------------------03
+            int key = 0;
+            for(int l = 0; l < (chunk.size()-1); l++){
+                int twenthrees = 1;
+                int index = 0;
+                while(index<l){
+                    twenthrees = twenthrees*23;
+                    index++;
+                }
+                key = key + (chunk[chunk.size()-l-1]*twenthrees);
+            }
+            if(key < 1){
+                key = key * -1;
+            }
+            /*
+            int result = 1;
+            for(int k = 0; k < chunk.size(); k = k+3){
+                if((k%2) == 0){
+                    result = (result * chunk[k])%213;
+                }
+                else if(k%3 == 0){
+                    result = result - (chunk[k]%83);
+                    if(result < 1){
+                        result = result + (chunk[k]%83);
+                    }
+                }
+                else{
+                    result = result + chunk[k];
+                }
+            }
+            int threes = 1;
+            int hash = 0;
+            hash = result%30;
+            for(int k = 0; k < 8; k++){
+                threes = threes* 3;
+            }
+            hash = hash * threes;
+            hash = hash + (result%577);
+            */
+            key = key%maxhash;
 
+            hashentry *temp = new hashentry;
+            temp->next = NULL;
+            temp->filename = files[k];
+            if(hashtable[key] == NULL){
+                hashtable[key] = temp;
+            }
+            else{
+                hashentry *hold = hashtable[key];
+                while( hold->next != NULL){
+                    hold = hold->next;
+                }
+                hold->next = temp;
+            }
 
             //--------------------------------------------------------------------------------------03
             chunk = "";
         }
         //--------------------------------------------------------------------------------------02
-
-
-
         inFile.close();
     }
     //-------------------------------------------------------------------------------------------00
 
     //2-D Array Code goes here
     //-------------------------------------------------------------------------------------------04
+    int collisions[files.size()-1][files.size()];
+    vector<string> chunkbros;
+    for(int r = 0; r < maxhash; r++){
+        if (hashtable[r] != NULL){
+            if (hashtable[r]->next != NULL) {
+                chunkbros.push_back(hashtable[r]->filename);
+                hashentry *holder = hashtable[r]->next;
+                while (holder != NULL) {
+                    chunkbros.push_back(holder->filename);
+                    holder = holder->next;
+                }
+                int x = 0;
+                int y = 0;
+                while
+            }
+        }
+
+    }
     //-------------------------------------------------------------------------------------------04
 
 
