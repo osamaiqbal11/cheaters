@@ -183,7 +183,20 @@ int main() {
 
     //2-D Array Code goes here
     //-------------------------------------------------------------------------------------------04
-    int collisions[files.size()-1][files.size()];
+    int collisions[files.size()][files.size()-1];
+    int z = 0;
+    int q = 0;
+    while( q < files.size()-1){
+        while( z < files.size()){
+            collisions[q][z] = 0;
+            z++;
+        }
+        z=0;
+        q++;
+    }
+
+
+
     vector<string> chunkbros;
     for(int r = 0; r < maxhash; r++){
         if (hashtable[r] != NULL){
@@ -194,9 +207,7 @@ int main() {
                     chunkbros.push_back(holder->filename);
                     holder = holder->next;
                 }
-                int x = 0;
-                int y = 0;
-                while
+
             }
         }
 

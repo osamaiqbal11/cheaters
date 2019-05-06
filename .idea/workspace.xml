@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="198" column="21" selection-start-line="198" selection-start-column="21" selection-end-line="198" selection-end-column="21" />
+            <state relative-caret-position="-170">
+              <caret line="185" column="47" selection-start-line="185" selection-start-column="47" selection-end-line="185" selection-end-column="47" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
                 <element signature="e#2252#2362#0" />
@@ -120,12 +120,12 @@
       <workItem from="1556914701480" duration="35000" />
       <workItem from="1556914737530" duration="50000" />
       <workItem from="1556914788692" duration="9775000" />
-      <workItem from="1557081774261" duration="11002000" />
+      <workItem from="1557081774261" duration="13239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21694000" />
+    <option name="totallyTimeSpent" value="23931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
@@ -177,8 +177,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="198" column="21" selection-start-line="198" selection-start-column="21" selection-end-line="198" selection-end-column="21" />
+        <state relative-caret-position="-170">
+          <caret line="185" column="47" selection-start-line="185" selection-start-column="47" selection-end-line="185" selection-end-column="47" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <element signature="e#2252#2362#0" />
