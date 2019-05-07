@@ -6,6 +6,8 @@
 #include <iostream>
 #include <cstring>
 #include <fstream>
+#include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 
@@ -25,6 +27,15 @@ int getdir (string dir, vector<string> &files)
     }
     closedir(dp);
     return 0;
+}
+
+bool search(int num, vector<int> done){
+    for(int u = 0; u < done.size(); u++){
+        if (done[u] == num){
+            return(true);
+        }
+    }
+    return (false);
 }
 
 int findfilenum(string filename, vector<string> files){
@@ -51,12 +62,14 @@ int main() {
 
     struct hashentry{
         string filename;
+        int number;
         hashentry *next;
+        string chunk;
     };
 
     //Initialize hash table here
     //--------------------------------------------------------------------------------------07
-    int maxhash = 63999;
+    int maxhash = 507953;
     hashentry *hashtable[maxhash];
     for(int m = 0; m<maxhash; m++){
         hashtable[m] = NULL;
@@ -80,6 +93,7 @@ int main() {
 
         //This loop reads from a file and pushes every alpha numeric string in doc to words-vector
         //---------------------------------------------------------------------------------------01
+        words.clear();
         string word;
         vector<char> wordholder;
         while (inFile >> word) {
@@ -119,19 +133,30 @@ int main() {
             //A chunk is made
             //Hashing code goes here
             //--------------------------------------------------------------------------------------03
-            int key = 0;
+
+            long key = 0;
             for(int l = 0; l < (chunk.size()-1); l++){
                 int twenthrees = 1;
                 int index = 0;
                 while(index<l){
-                    twenthrees = twenthrees*23;
+                    twenthrees = twenthrees*37;
                     index++;
                 }
                 key = key + (chunk[chunk.size()-l-1]*twenthrees);
             }
+
             if(key < 1){
                 key = key * -1;
+                key = key;
             }
+           /*
+            key = key/10;
+            if(i%23 == 0)
+                key = key%500000;
+
+            if(i%37 == 0)
+                key = key%100000;
+            */
             /*
             int result = 1;
             for(int k = 0; k < chunk.size(); k = k+3){
@@ -157,20 +182,26 @@ int main() {
             hash = hash * threes;
             hash = hash + (result%577);
             */
+
             key = key%maxhash;
 
             hashentry *temp = new hashentry;
             temp->next = NULL;
+            temp->number = k;
             temp->filename = files[k];
+            temp->chunk = chunk;
             if(hashtable[key] == NULL){
                 hashtable[key] = temp;
             }
             else{
+
                 hashentry *hold = hashtable[key];
-                while( hold->next != NULL){
-                    hold = hold->next;
+                if(temp->chunk == hold->chunk) {
+                    while (hold->next != NULL) {
+                        hold = hold->next;
+                    }
+                    hold->next = temp;
                 }
-                hold->next = temp;
             }
 
             //--------------------------------------------------------------------------------------03
@@ -183,18 +214,11 @@ int main() {
 
     //2-D Array Code goes here
     //-------------------------------------------------------------------------------------------04
-    int collisions[files.size()][files.size()-1];
-    int z = 0;
-    int q = 0;
-    while( q < files.size()-1){
-        while( z < files.size()){
-            collisions[q][z] = 0;
-            z++;
-        }
-        z=0;
-        q++;
-    }
 
+   // int collisions[files.size()][files.size()-1];
+
+
+    /*
 
 
     vector<string> chunkbros;
@@ -212,8 +236,64 @@ int main() {
         }
 
     }
-    //-------------------------------------------------------------------------------------------04
 
+    */
+
+
+    int collisions[files.size()][files.size()];
+
+    int z = 0;
+    int q = 0;
+    while( q < files.size()-1){
+        while( z < files.size()){
+            collisions[q][z] = 0;
+            z++;
+        }
+        z=0;
+        q++;
+    }
+    vector<int> done;
+    vector <string> yo;
+    for (int i = 0; i < maxhash; i++) {
+        if(hashtable[i] != NULL) {
+            if (hashtable[i]->next != NULL) {
+                hashentry *ptr1 = hashtable[i];
+                while (ptr1 != NULL && ptr1->next != NULL) {
+                    hashentry *ptr2 = ptr1->next;
+                    while (ptr2 != NULL) {
+                        if ((ptr2->number) != (ptr1->number)) {
+                            collisions[ptr1->number][ptr2->number]++;
+                        }
+                        /*else if ((ptr1->number) < (ptr2->number)) {
+                            collisions[ptr1->number][ptr2->number]++;
+                        }
+                         */
+                        ptr2 = ptr2->next;
+                    }
+                    ptr1 = ptr1->next;
+                }
+            }
+        }
+    }
+
+    vector<vector<int>> print;
+
+    for (int i = 0; i < files.size(); i ++) {
+        for (int j = i + 1; j < files.size(); j ++)   {
+            if (collisions[i][j] > 200) {
+                vector <int> temp;
+                temp.push_back(collisions[i][j]);
+                temp.push_back(i);
+                temp.push_back(j);
+                print.push_back(temp);
+            }
+        }
+    }
+    sort(print.begin(), print.end());
+    for (int i = print.size() - 1; i >= 0; i --) {
+        cout << print.at(i).at(0) << ": " << files[print.at(i).at(1)] << ", " << files[print.at(i).at(2)] << endl;
+    }
+    //-------------------------------------------------------------------------------------------04
 
 
     return 0;
